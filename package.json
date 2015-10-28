@@ -1,0 +1,14 @@
+{
+  "name": "blogangularoscar",
+  "version": "1.0.0",
+  "description": "un simple blog hecho en angularjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oscar calderin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
