@@ -9,8 +9,12 @@ app.config(function($routeProvider){
 		templateUrl: 'blog.html',
 		controller: 'postController'
 	})
+	.when('/register', {
+		templateUrl: 'register.html',
+		controller: 'registerController'
+	})
 	.otherwise({ redirectTo: '/' });
-	
+
 });
 
 
@@ -39,7 +43,7 @@ app.directive('tagCloud', function() {
 
 
 app.controller('postController', ['$scope', function ($scope) {
-	
+
 
 	$scope.postsList = [];
 	$scope.cloudTags = [];
@@ -50,7 +54,7 @@ app.controller('postController', ['$scope', function ($scope) {
 	 	// var i = 0;
     	return $scope.cloudTags;
   	};
-	
+
 	$scope.addPost = function(){
 		var post = {
 			title: $scope.post.titulo,
@@ -71,14 +75,14 @@ app.controller('postController', ['$scope', function ($scope) {
 		}
 		console.log($scope.cloudTags);
 		$scope.tags = [];
-	};	
+	};
 
 
 }]);
 
 
 app.controller('LoginController', ['$scope', '$location', function ($scope, $location) {
-	
+
 	$scope.loginError = "";
 	$scope.loginUser = function(){
 		var user = $scope.email;
@@ -90,11 +94,13 @@ app.controller('LoginController', ['$scope', '$location', function ($scope, $loc
 			$scope.loginError = "Invalid user/pass.";
 		}
 	};
-	
+
 
 
 }]);
 
+app.controller('registerController', ['$scope', '$location', function ($scope, $location) {
 
+	$scope.registerError = "";
 
-
+}]);

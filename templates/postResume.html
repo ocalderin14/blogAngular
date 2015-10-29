@@ -1,7 +1,7 @@
 <div class="media">
     <div class="media-body">
-        <h4 class="media-heading">{{ p.title }}
-            <small>{{ p.fecha | date:'dd-MM-yyyy' }}</small>
+        <h4 class="media-heading"><a href="#">{{ p.title }}</a>
+            <small>Posted by </small><strong>Oscar</strong> <small>Date: {{ p.fecha | date:'dd-MM-yyyy' }}</small>
         </h4>
         {{ p.contenido }}
     </div>

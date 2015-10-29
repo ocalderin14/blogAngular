@@ -4,7 +4,7 @@
 
 				<div class="well">
                     <h4>Leave a Post:</h4>
-                    <form role="form" ng-submit="addPost()">
+                    <form role="form" ng-submit="addPost()" action="/post">
                     	<div class="form-group">
 							<input type="text" name="tag" ng-model="post.titulo" placeholder="Title" class="form-control"/>
 						</div>
@@ -12,7 +12,7 @@
 							<textarea id="content" ng-model="post.contenido" placeholder="Content" class="form-control"></textarea>
 						</div>
                         <tags-input ng-model="tags">
-                            <auto-complete source="loadTags($query)"></auto-complete>    
+                            <auto-complete source="loadTags($query)"></auto-complete>
                         </tags-input>
 <!-- 						<div class="form-group">
 							<input type="text" name="tag" ng-model="post.tag" placeholder="Tag" class="form-control"/>
@@ -24,7 +24,7 @@
                 <hr>
 
 				<post-info ng-repeat="p in postsList" post="p"></post-info>
-  
+
 
             </div>
 
@@ -34,19 +34,18 @@
                     <h4>Blog Tags</h4>
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="list-unstyled"> 
+                            <ul class="list-unstyled">
                                 <li ng-repeat="p in postsList"><tag-cloud tags="p.tags"></tag-cloud></li>
                             </ul>
                         </div>
- 
+
                     </div>
-                    
+
                 </div>
 
-                
+
 
 
             </div>
             </div>
             <hr>
-
